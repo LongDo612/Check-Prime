@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let checkPrime = (number) => {
+            for(let i=2;i<=Math.sqrt(number);i++){
+                if(number%i==0 || number < 2)
+                    return false;
+            }
+            return true;
+        }
+
+            let a = parseInt(prompt("Enter a number from 0 to 10000: "));
+            while (a > 10000 || a < 0){
+                a = parseInt(prompt("Enter a number from 0 to 10000: "));
+            }
+            if(checkPrime(a)){
+                alert(a + " is a prime number.");
+            }
+            else {
+                alert(a + " is not a prime number.");
+            }
+    </script>
+</body>
+</html>
